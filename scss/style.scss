@@ -274,12 +274,14 @@ section#timeline {
       font-family: $font-head;
       font-weight: 700;
       font-size: $h2-font-size;
+      margin-bottom: 0px;
     }
     .year {
       color: $lightBlue;
     }
     .past-year {
       color: $darkBlue;
+      padding-bottom: 55px;
     }
   }
   .content-timeline {
@@ -296,11 +298,11 @@ section#timeline {
     }
 
     .item-wrapper {
-      
       color: white;
       padding: 15px;
       margin-top: 15px;
       position: relative;
+      border-radius: 5px;
 
       .function {
         font-family: $font-head;
@@ -368,6 +370,42 @@ section#timeline {
   }
 }
 
-section#story {
+section#quote {
+  pointer-events: auto;
   background-color: white;
+  background-image: url("../img/software.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 100%;
+  background-attachment: fixed;
+
+  .gradient-background {
+    background: -webkit-linear-gradient(top left, rgba(17, 19, 47, 0.9), rgb(38, 61, 78));
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .quote {
+      font-weight: 300;
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+      font-family: $font-head;
+      margin: 55px 0;
+
+      .fa-quote-left {
+        padding-right: 5px;
+      }
+      .fa-quote-right {
+        padding-left: 5px;
+      }
+
+      footer {
+        color: #d9983e;
+        font-family: $font-body;
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+  }
 }
