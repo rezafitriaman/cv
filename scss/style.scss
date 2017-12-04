@@ -175,6 +175,20 @@ html {
   content:'.';
   color: $orange;
 }
+
+.title-wrapper {
+  font-family: $font-head;
+
+  .title {
+    font-weight: 700;
+    font-size: $h1-font-size;
+  }
+  .subtitle {
+    padding-top: 15px;
+    font-weight: 300;
+    font-size: $p-font-size;
+  }
+}
 .hamburger-background {
   .logo {
     color:white;
@@ -251,24 +265,116 @@ section.text-header {
   }
 }
 
-section#timeline {
-   pointer-events: auto;
-   background-color: white;
-   padding-top: 55px;
-
-  .title-wrapper {
-    font-family: $font-head;
-
-    .title {
+section#hi {
+  pointer-events: auto;
+  background-color: white;
+  border-top: 3px solid $orange;
+  padding-top: 55px;
+  .text_wrapper {
+    text-align: center;
+    .text {
+      color: black;
       font-weight: 700;
-      font-size: $h1-font-size;
+      font-family: $font-head;
+      font-size: $p-font-size;
+      padding: 0px 150px;
+    }
+  }
+}
+
+section#skils {
+  pointer-events: auto;
+  background-color: white;
+  padding-bottom: 55px;
+  .content_wrapper {
+    color: black;
+    text-align: center;
+    .fa {
+      color: $darkGreen;
+    }
+    .title {
+      min-height: 30px;
+      font-size: $h3-font-size;
+      font-weight: 700;
+    }
+    .dash-header {
+      margin: 25px auto;
     }
     .subtitle {
       padding-top: 15px;
       font-weight: 300;
       font-size: $p-font-size;
+      font-family: $font-body;
     }
   }
+}
+
+section#language {
+  pointer-events: auto;
+  padding-bottom: 55px;
+  .border {
+    border: 0.1px solid $border;
+    .wrapper {
+      font-weight: 400;
+      color: $orange;
+      .items {
+        list-style-type: none;
+        padding-left: 0px;
+        margin-top: 15px;
+
+        .item {
+          display: inline-block;
+          .text {
+            font-size: $h3-font-size;
+          }
+       }
+      }
+      .progress {
+        .progress-bar {
+          background-color: $darkGreen;
+        }
+        .val {
+            float: right;
+            margin-right: 20px;
+            font-style: italic;
+          }
+        .css {
+          width: 95%;
+        }
+        .html {
+          width: 95%;
+        }
+        .javascript {
+          width: 30%;
+        }
+        .jquary {
+          width: 80%;
+        }
+        .gsap {
+          width: 75%;
+        }
+        .typescript {
+          width: 10%;
+        }
+        .angular {
+          width: 10%;
+        }
+        .php {
+          width: 50%;
+        }
+        .java {
+          width: 10%;
+        }
+      }
+    }
+  }
+}
+
+section#timeline {
+   pointer-events: auto;
+   background-color: white;
+   padding-top: 55px;
+
   .now-wrapper {
     .year, .past-year {
       font-family: $font-head;
@@ -388,7 +494,6 @@ section#quote {
     .quote {
       font-weight: 300;
       font-size: 1.5em;
-      margin: 0;
       color: white;
       font-family: $font-head;
       margin: 55px 0;
@@ -405,6 +510,44 @@ section#quote {
         font-family: $font-body;
         font-weight: 300;
         font-style: italic;
+      }
+    }
+  }
+}
+
+section#aboutMe {
+  pointer-events: auto;
+  background-color: white;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  .img-wrapper {
+
+  }
+  .text-wrapper {
+    font-family: $font-body;
+    font-weight: 300;
+
+    .social_wrapper {
+      margin-top: 25px;
+      text-align: right;
+      .socials {
+        padding-left: 0px;
+        list-style-type: none;
+        .item {
+          display: inline-block;
+          .social {
+            text-decoration: none;
+            margin-right: 5px;
+            color: $lightBlue;
+            position: relative;
+            bottom: 0px;
+            transition: all 0.5s;
+          }
+          .social:hover {
+            color: $orange;
+            bottom: 5px;
+          }
+        }
       }
     }
   }
