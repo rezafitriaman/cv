@@ -71,6 +71,30 @@ html {
   background: $lightBlue;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  .social_wrapper {
+    margin-top: 25px;
+    text-align: left;
+    margin-left: 15px;
+    .socials {
+      padding-left: 0px;
+      list-style-type: none;
+      .item {
+        display: inline-block;
+        .social {
+          text-decoration: none;
+          margin-right: 5px;
+          color: $orange;
+          position: relative;
+          bottom: 0px;
+          transition: all 0.5s;
+        }
+        .social:hover {
+          color: white;
+          bottom: 5px;
+        }
+      }
+    }
+  }
 }
 
 .st-menu::after {
@@ -96,13 +120,13 @@ html {
 
 /* content style */
 
-.st-menu ul {
+.st-menu .nav-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.st-menu ul li a {
+.st-menu .nav-list .list a {
   display: block;
   padding: 1em 1em 1em 1.2em;
   outline: none;
@@ -116,11 +140,11 @@ html {
   transition: background 0.3s, box-shadow 0.3s ease-in-out;
 }
 
-.st-menu ul li:first-child a {
+.st-menu .nav-list .list:first-child a {
   box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
 }
 
-.st-menu ul li a:hover {
+.st-menu .nav-list .list a:hover {
   background: rgba(0,0,0,0.2);
   box-shadow: inset 0 -1px rgba(0,0,0,0);
   color: #fff;
@@ -182,11 +206,13 @@ html {
   .title {
     font-weight: 700;
     font-size: $h1-font-size;
+    font-family: $font-head;
   }
   .subtitle {
-    padding-top: 15px;
+    padding: 15px 150px 0px;
     font-weight: 300;
     font-size: $p-font-size;
+    font-family: $font-head;
   }
 }
 .hamburger-background {
@@ -265,10 +291,9 @@ section.text-header {
   }
 }
 
-section#hi {
+section.hi {
   pointer-events: auto;
   background-color: white;
-  border-top: 3px solid $orange;
   padding-top: 55px;
   .text_wrapper {
     text-align: center;
@@ -282,7 +307,7 @@ section#hi {
   }
 }
 
-section#skils {
+section.skils {
   pointer-events: auto;
   background-color: white;
   padding-bottom: 55px;
@@ -296,36 +321,42 @@ section#skils {
       min-height: 30px;
       font-size: $h3-font-size;
       font-weight: 700;
+      font-family: $font-head;
     }
     .dash-header {
       margin: 25px auto;
     }
-    .subtitle {
+    .description {
       padding-top: 15px;
       font-weight: 300;
-      font-size: $p-font-size;
+      font-size: 1.1;
       font-family: $font-body;
+      line-height: 25px;
     }
   }
 }
 
-section#language {
+section.language {
   pointer-events: auto;
   padding-bottom: 55px;
+  background-color: white;
   .border {
     border: 0.1px solid $border;
     .wrapper {
-      font-weight: 400;
       color: $orange;
       .items {
         list-style-type: none;
         padding-left: 0px;
         margin-top: 15px;
-
+        font-family: $font-head;
+        font-style: italic;
+        font-weight: 300;
         .item {
           display: inline-block;
           .text {
             font-size: $h3-font-size;
+            margin-left: 5px;
+            font-weight: 700;
           }
        }
       }
@@ -337,6 +368,7 @@ section#language {
             float: right;
             margin-right: 20px;
             font-style: italic;
+            font-family: $font-body;
           }
         .css {
           width: 95%;
@@ -365,16 +397,34 @@ section#language {
         .java {
           width: 10%;
         }
+        .node {
+          width: 10%;
+        }
+        .git {
+          width: 10%
+        }
+        .scss {
+          width: 85%
+        }
       }
+      
     }
+  }
+  .border:hover {
+    transition: all .3s ease-in-out;
+    border: 0.1px solid $orange;
+  }
+  .border:hover .progress {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.26), 0 7px 28px 0 rgba(0,0,0,.25);
+    transform: scaleX(1.01);
+    transition: all .3s ease-in-out;
   }
 }
 
-section#timeline {
+section.timeline {
    pointer-events: auto;
    background-color: white;
    padding-top: 55px;
-
   .now-wrapper {
     .year, .past-year {
       font-family: $font-head;
@@ -416,16 +466,19 @@ section#timeline {
       }
       .company {
         font-family: $font-head;
+        font-weight: 300;
       }
       .date {
         font-family: $font-head;
-        font-weight: 300;
+        font-weight: 700;
         color: $orange;
         font-style: italic;
       }
       .description {
         font-family: $font-body;
         font-weight: 300;
+        font-size: 1.1em;
+        line-height: 25px;
       }
     }
 
@@ -476,7 +529,7 @@ section#timeline {
   }
 }
 
-section#quote {
+section.quote {
   pointer-events: auto;
   background-color: white;
   background-image: url("../img/software.jpg");
@@ -515,11 +568,12 @@ section#quote {
   }
 }
 
-section#aboutMe {
+section.aboutMe {
   pointer-events: auto;
   background-color: white;
   padding-top: 55px;
   padding-bottom: 55px;
+  font-family: $font-head;
   .img-wrapper {
 
   }
@@ -539,6 +593,106 @@ section#aboutMe {
             text-decoration: none;
             margin-right: 5px;
             color: $lightBlue;
+            position: relative;
+            bottom: 0px;
+            transition: all 0.5s;
+          }
+          .social:hover {
+            color: $orange;
+            bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.contact {
+  text-align: center;
+  pointer-events: auto;
+  background-color: white;
+  background-image: url("../img/software.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 100%;
+  background-attachment: fixed;
+
+  .gradient-background {
+    background: -webkit-linear-gradient(top left, rgba(17, 19, 47, 0.9), rgb(38, 61, 78));
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .wrapper {
+      color: white;
+      .title {
+        font-weight: 700;
+        font-size: $h1-font-size;
+        font-family: $font-head;
+      }
+      .subtitle {
+        font-weight: 300;
+        font-size: $p-font-size;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        padding: 0px 150px;
+        font-family: $font-head;
+      }
+      .button {
+        z-index: 0;
+      }
+    }
+  }  
+}
+
+.footer {
+  background-color: $darkBlue;
+  color: white;
+  pointer-events: auto;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  .wrapper {
+    text-align: center;
+    .logo {
+      color:white;
+      text-align: center;
+
+      .text-logo {
+          font-family: $logo;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          margin-top: 14px;
+        
+        .logo-link {
+          color: white;
+          text-decoration: none;
+        }
+        .logo-link:hover {
+          opacity: 0.7;
+          transition: opacity 0.3s;
+        }
+
+        .dot {
+          font-size: 15px;
+          color: $orange;
+        }
+      }
+    }
+    .text {
+      font-family: $font-body;
+    }
+    .social_wrapper {
+      margin-top: 20px;
+      text-align: center;
+      .socials {
+        padding-left: 0px;
+        list-style-type: none;
+        .item {
+          display: inline-block;
+          .social {
+            text-decoration: none;
+            margin-right: 5px;
+            color: white;
             position: relative;
             bottom: 0px;
             transition: all 0.5s;

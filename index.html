@@ -32,13 +32,39 @@
             <!-- content push wrapper -->
             <nav class="st-menu st-reveal" id="menu-2">
                 <!-- sidebar content -->
-                <ul>
-                    <li><a class="icon icon-data" href="#">Data Management</a></li>
-                    <li><a class="icon icon-location" href="#">Location</a></li>
-                    <li><a class="icon icon-study" href="#">Study</a></li>
-                    <li><a class="icon icon-photo" href="#">Collections</a></li>
-                    <li><a class="icon icon-wallet" href="#">Credits</a></li>
+                <ul class="nav-list">
+                    <li class="list"><a class="icon icon-home" href="#home">Home</a></li>
+                    <li class="list"><a class="icon icon-skils" href="#skils">Skils</a></li>
+                    <li class="list"><a class="icon icon-timeline" href="#timeline">Professional Timeline</a></li>
+                    <li class="list"><a class="icon icon-about" href="#aboutMe">About</a></li>
+                    <li class="list"><a class="icon icon-contact" href="#contact">Contact</a></li>
+                    <li class="list"><a class="icon icon-tutorials" href="#tutorials">Tutorials</a></li>
+                    <li class="list"><a class="icon icon-blog" href="#blog">Blog</a></li>
                 </ul>
+                <div class="social_wrapper">
+                    <ul class="socials">
+                        <li class="item">
+                            <a href="#" class="social">
+                                <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="social">
+                                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="social">
+                                 <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="social">
+                                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
             <div class="hamburger-background">
@@ -63,7 +89,7 @@
 
             <div class="st-pusher">
 
-                <div class="st-content"><!-- this is the wrapper for the content -->
+                <div class="st-content" id="home"><!-- this is the wrapper for the content -->
                 
                     <div id="overlay">         
                         <section class="text-header">
@@ -89,7 +115,7 @@
 
                     <div class="st-content-inner"></div>
 
-                    <section id="hi">
+                    <section class="hi" id="skils">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -102,7 +128,7 @@
                         </div>
                     </section>
 
-                    <section id="skils">
+                    <section class="skils">
                         <div class="container">
                             <div class="row">
                                 <div class="wrapper_skils">
@@ -151,7 +177,7 @@
                         </div>
                     </section>
 
-                    <section id="language">
+                    <section class="language" id="language">
                         <div class="container">
                             <div class="row">
                                 <div class="border col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -307,10 +333,62 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="border col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <div class="wrapper">
+                                        <ul class="items">
+                                            <li class="item">
+                                                <i class="fa fa-code" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="item">
+                                                <p class="text">GIT</p>
+                                            </li>
+                                        </ul>
+                                        <div class="progress">
+                                            <div class="git progress-bar bg-success">
+                                                <span class="val">75%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <div class="wrapper">
+                                        <ul class="items">
+                                            <li class="item">
+                                                <i class="fa fa-code" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="item">
+                                                <p class="text">NODE.JS</p>
+                                            </li>
+                                        </ul>
+                                        <div class="progress">
+                                            <div class="node progress-bar bg-success">
+                                                <span class="val">10%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <div class="wrapper">
+                                        <ul class="items">
+                                            <li class="item">
+                                                <i class="fa fa-code" aria-hidden="true"></i>
+                                            </li>
+                                            <li class="item">
+                                                <p class="text">SCSS</p>
+                                            </li>
+                                        </ul>
+                                        <div class="progress">
+                                            <div class="scss progress-bar bg-success">
+                                                <span class="val">80%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
-                    <section id="quote">
+
+                    <section class="quote" id="quote">
                         <div class="gradient-background">
                             <div class="container">
                             
@@ -324,8 +402,7 @@
 
                     </section>
 
-                    <section id="timeline">
-
+                    <section class="timeline" id="timeline">
                         <div class="container">
                             <div class="row">
 
@@ -433,7 +510,7 @@
                         </div>
                     </section>
 
-                    <section id="quote">
+                    <section class="quote" id="quote">
                         <div class="gradient-background">
                             <div class="container">
                             
@@ -444,10 +521,9 @@
                                 </div>
                             </div>
                         </div>
-
                     </section>
 
-                    <section id="aboutMe">
+                    <section class="aboutMe" id="aboutMe">
                         <div class="container">
                             <div class="row">
                                 <div class="title-wrapper text-center">
@@ -504,22 +580,22 @@
                                             <ul class="socials">
                                                 <li class="item">
                                                     <a href="#" class="social">
-                                                        <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                                                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li class="item">
                                                     <a href="#" class="social">
-                                                        <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+                                                        <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li class="item">
                                                     <a href="#" class="social">
-                                                         <i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+                                                         <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                                 <li class="item">
                                                     <a href="#" class="social">
-                                                        <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+                                                        <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -532,7 +608,64 @@
                             </div>
                         </div>
                         
-                    </section>             
+                    </section>
+
+                    <section class="contact" id="contact">
+                        <div class="gradient-background">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="wrapper">
+                                            <h1 class="title">Want to work together?</h1>
+                                            <p class="subtitle">I'm currently accepting new projects and would love to hear about yours. Please take a few minutes to tell me about it.</p>
+                                            <button class="button button--orange button--round-l button--text-medium"><span>button 1</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="wrapper">
+                                        <span class="logo">
+                                            <h4 class="text-logo">
+                                                <a href="#" class="logo-link">fitriaman<span class="dot">o</span></a>
+                                            </h4>
+                                        </span>
+                                        <p class="text">Handmade by me © 2017</p>
+                                        <div class="social_wrapper">
+                                            <ul class="socials">
+                                                <li class="item">
+                                                    <a href="#" class="social">
+                                                        <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="#" class="social">
+                                                        <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="#" class="social">
+                                                         <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="#" class="social">
+                                                        <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>        
 
                 </div><!-- /st-content -->
 

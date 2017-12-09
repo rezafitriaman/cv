@@ -36,7 +36,9 @@
 .button--cv::before,
 .button--cv::after,
 .button--cv-2::before,
-.button--cv-2::after {
+.button--cv-2::after,
+.button--orange::before,
+.button--orange::after {
 	content: '';
 	z-index: -1;
 	border-radius: inherit;
@@ -64,12 +66,24 @@
 	transform: scale3d(1.2, 1.2, 1);
 }
 
-.button--cv:hover::before, .button--cv-2:hover::before {
+.button--orange::after {
+    background: $orange;
+}
+
+.button--orange::before {
+	border: 5px solid $orange;
+	opacity: 0;
+	-webkit-transform: scale3d(1.2, 1.2, 1);
+	transform: scale3d(1.2, 1.2, 1);
+}
+
+.button--cv:hover::before, .button--cv-2:hover::before, .button--orange:hover::before {
 	opacity: 1;
 	-webkit-transform: scale3d(1, 1, 1);
 	transform: scale3d(1, 1, 1);
 }
-.button--cv:hover::after, .button--cv-2:hover::after {
+
+.button--cv:hover::after, .button--cv-2:hover::after, .button--orange:hover::after {
 	opacity: 0;
 	-webkit-transform: scale3d(0.8, 0.8, 1);
 	transform: scale3d(0.8, 0.8, 1);
